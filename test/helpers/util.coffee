@@ -7,7 +7,14 @@ setup = (vile) ->
 
 issues = [
   {
-    file: "relative/file.php",
+    file: "relative-path/file.php",
+    msg: "some violation",
+    type: "warn",
+    where: { start: { line: 0 }, end: {} },
+    data: {}
+  },
+  {
+    file: "absolute-path/file.php",
     msg: "some violation",
     type: "warn",
     where: { start: { line: 0 }, end: {} },

@@ -7,6 +7,7 @@ let log = vile.logger.create("phpmd")
 
 // TODO: break up this into smaller modules
 
+const STARTING_SLASH = /^\//
 const PHPMD = "phpmd"
 const XML_FORMAT = "xml"
 const ALL_FILES = "."
@@ -19,14 +20,11 @@ const DEFAULT_RULESETS = [
   "unusedcode"
 ]
 
-let relative_path = (file) => {
-  let without_leading_slash = process.cwd().replace(/^\//, "")
-  let process_cwd = new RegExp("^\/?" + without_leading_slash)
-  let relative_dots = /^\.?\//
-  return file
-    .replace(process_cwd, "")
-    .replace(relative_dots, "")
-}
+let relative_path = (file) =>
+  path.isAbsolute(file) ?
+    path.relative(process.cwd(), file) :
+    file.replace(process.cwd().replace(STARTING_SLASH, ""), "")
+        .replace(STARTING_SLASH, "")
 
 let xml_to_json = (xml_string) =>
   new Promise((resolve, reject) => {
