@@ -3,7 +3,13 @@ module.exports = """
 <pmd version="@project.version@" timestamp="2016-01-07T23:09:10+00:00">
   <file name="/home/brent/src/vile/plugins/phpmd/test/fixtures/NoViolations.php">
   </file>
-  <file name="/home/brent/src/vile/plugins/phpmd/test/fixtures/UserController.php">
+  <file name="relative/file.php">
+    <violation beginline="0" priority="2">
+      some violation
+    </violation>
+  </file>
+  <!-- covers a weird case where no / at start of abs path -->
+  <file name="home/brent/src/vile/plugins/phpmd/test/fixtures/UserController.php">
     <violation beginline="11" rule="Superglobals" ruleset="Controversial Rules" package="+global" externalInfoUrl="#" class="UserController" method="login" priority="1">
       login accesses the super-global variable $_POST.
     </violation>

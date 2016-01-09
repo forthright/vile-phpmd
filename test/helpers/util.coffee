@@ -7,6 +7,13 @@ setup = (vile) ->
 
 issues = [
   {
+    file: "relative/file.php",
+    msg: "some violation",
+    type: "warn",
+    where: { start: { line: 0 }, end: {} },
+    data: {}
+  },
+  {
     file: "test/fixtures/UserController.php",
     msg: "login accesses the super-global variable $_POST." +
           " (Controversial Rules :: Superglobals)",

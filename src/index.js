@@ -19,10 +19,14 @@ const DEFAULT_RULESETS = [
   "unusedcode"
 ]
 
-let relative_path = (file) =>
-  path.normalize(file)
-    .replace(process.cwd(), "")
-    .replace(/^\.?\//, "")
+let relative_path = (file) => {
+  let without_leading_slash = process.cwd().replace(/^\//, "")
+  let process_cwd = new RegExp("^\/?" + without_leading_slash)
+  let relative_dots = /^\.?\//
+  return path.normalize(file)
+    .replace(process_cwd, "")
+    .replace(relative_dots, "")
+}
 
 let xml_to_json = (xml_string) =>
   new Promise((resolve, reject) => {
