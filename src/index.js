@@ -23,7 +23,7 @@ let relative_path = (file) => {
   let without_leading_slash = process.cwd().replace(/^\//, "")
   let process_cwd = new RegExp("^\/?" + without_leading_slash)
   let relative_dots = /^\.?\//
-  return path.normalize(file)
+  return file
     .replace(process_cwd, "")
     .replace(relative_dots, "")
 }
