@@ -13,8 +13,6 @@ vile:
       ".eslintignore",
       ".eslintrc",
       ".fs-lint",
-      ".jshintrc",
-      ".jshintignore",
       ".gitignore",
       ".npmrc",
       "README.md",
