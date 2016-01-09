@@ -25,20 +25,12 @@ For example, on [Arch](https://www.archlinux.org):
 There should be (more or less) a one to one relationship
 with the `phpmd` cli.
 
-## Single Path
+### Paths
 
 ```yml
 phpmd:
   config:
-    paths: "."
-```
-
-### Multiple Paths
-
-```yml
-phpmd:
-  config:
-    paths: [ "a/**", "b/**" ]
+    paths: "a/**" || [ "a/**", "b/**" ]
 ```
 
 ### Rulesets
@@ -46,7 +38,7 @@ phpmd:
 ```yml
 phpmd:
   config:
-    rulesets: [ "codesize" ]
+    rulesets: "codesize" || [ "codesize", "controversial" ]
 ```
 
 ### Ruleset File
@@ -62,7 +54,7 @@ phpmd:
 ```yml
 phpmd:
   config:
-    exclude: [ "..." ]
+    exclude: "..." || [ "..." ]
 ```
 
 ### Suffixes
@@ -70,15 +62,7 @@ phpmd:
 ```yml
 phpmd:
   config:
-    suffixes: [ "..." ]
-```
-
-### Suffixes
-
-```yml
-phpmd:
-  config:
-    suffixes: [ "..." ]
+    suffixes: "..." || [ "..." ]
 ```
 
 ### Minimum Priority
