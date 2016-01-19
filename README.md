@@ -92,7 +92,7 @@ an XML CLI output that is currently used until a more ideal
 option is implemented.
 
 - `bin` houses any shell based scripts
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
 - `lib` generated js library
 
 ## Hacking
