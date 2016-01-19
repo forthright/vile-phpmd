@@ -7,43 +7,57 @@ setup = (vile) ->
 
 issues = [
   {
-    file: "relative-path/file.php",
-    msg: "some violation",
-    type: "warn",
-    where: { start: { line: 0 }, end: {} },
-    data: {}
+    path: "relative-path/file.php",
+    type: "style",
+    title: "some violation",
+    message: "some violation",
+    advisory: undefined,
+    signature: "phpmd::some violation",
+    where: { start: { line: 0 }, end: undefined }
   },
   {
-    file: "absolute-path/file.php",
-    msg: "some violation",
-    type: "warn",
-    where: { start: { line: 0 }, end: {} },
-    data: {}
+    path: "absolute-path/file.php",
+    type: "style",
+    title: "some violation",
+    message: "some violation",
+    advisory: undefined,
+    signature: "phpmd::some violation",
+    where: { start: { line: 0 }, end: undefined }
   },
   {
-    file: "test/fixtures/UserController.php",
-    msg: "login accesses the super-global variable $_POST." +
+    path: "test/fixtures/UserController.php",
+    type: "maintainability",
+    advisory: "#",
+    title: "login accesses the super-global variable $_POST." +
           " (Controversial Rules :: Superglobals)",
-    type: "error",
-    where: { start: { line: 11 }, end: {} },
-    data: {}
+    message: "login accesses the super-global variable $_POST." +
+          " (Controversial Rules :: Superglobals)",
+    signature: "phpmd::Controversial Rules::Superglobals",
+    where: { start: { line: 11 }, end: undefined }
   },
   {
-    file: "test/fixtures/UserController.php",
-    msg: "Avoid variables with short names like $id. " +
+    path: "test/fixtures/UserController.php",
+    type: "style",
+    advisory: "http://phpmd.org/rules/naming.html#shortvariable",
+    title: "Avoid variables with short names like $id. " +
           "Configured minimum length is 3.",
-    type: "warn",
-    where: { start: {}, end: {} },
-    data: {}
+    message: "Avoid variables with short names like $id. " +
+          "Configured minimum length is 3.",
+    signature: "phpmd::Naming Rules::undefined",
+    where: undefined
   },
   {
-    file: "test/fixtures/UserController.php",
-    msg: "The method login uses an else expression. " +
+    path: "test/fixtures/UserController.php",
+    type: "maintainability",
+    advisory: "http://phpmd.org/rules/cleancode.html#eleseexpression",
+    title: "The method login uses an else expression. " +
           "Else is never necessary and you can simplify the code to " +
           "work without else. (Clean Code Rules :: ElseExpression)",
-    type: "error",
-    where: { start: { line: 23 }, end: { line: 47 } },
-    data: {}
+    message: "The method login uses an else expression. " +
+          "Else is never necessary and you can simplify the code to " +
+          "work without else. (Clean Code Rules :: ElseExpression)",
+    signature: "phpmd::Clean Code Rules::ElseExpression",
+    where: { start: { line: 23 }, end: { line: 47 } }
   }
 ]
 

@@ -94,7 +94,7 @@ let phpmd = (data) =>
     .then((phpmd_result) => _.get(phpmd_result, "pmd.file", []))
 
 let issue_type = (violation) =>
-  _.get(violation, "$.priority") == 1 ? vile.ERROR : vile.WARNING
+  _.get(violation, "$.priority") == 1 ? vile.MAIN : vile.STYL
 
 let start_line = (violation) => {
   if (_.has(violation, "$.beginline")) {
@@ -116,17 +116,34 @@ let message = (violation) => {
   return `${msg}${ruleinfo}`
 }
 
+let signature = (violation) =>
+  _.has(violation, "$.ruleset") || _.has(violation, "$.rule") ?
+  `phpmd::${_.get(violation, "$.ruleset")}` +
+  `::${_.get(violation, "$.rule")}` :
+    `phpmd::${_.trim(_.get(violation, "_"))}`
+
+let line_info = (violation) => {
+  let start = start_line(violation)
+  let end = end_line(violation)
+
+  if (start || end) {
+    return { start: start, end: end }
+  }
+}
+
 let into_vile_issues = (phpmd_files) =>
   _.flatten(
     _.map(phpmd_files, (file) =>
       _.map(file.violation, (violation) =>
-        vile.issue(
-          issue_type(violation),
-          relative_path(file.$.name),
-          message(violation),
-          start_line(violation),
-          end_line(violation)
-        )
+        vile.issue({
+          type: issue_type(violation),
+          path: relative_path(_.get(file, "$.name")),
+          advisory: _.get(violation, "$.externalInfoUrl"),
+          title: message(violation),
+          message: message(violation),
+          signature: signature(violation),
+          where: line_info(violation),
+        })
       )
     )
   )

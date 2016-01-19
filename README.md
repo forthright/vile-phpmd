@@ -1,9 +1,13 @@
-# vile-phpmd
-
-[![Circle CI](https://circleci.com/gh/brentlintner/vile-phpmd.svg?style=svg&circle-token=8fc9fd7ba9275fa5f58b938c87c71bd0851c4476)](https://circleci.com/gh/brentlintner/vile-phpmd)
+# vile-phpmd [![Circle CI](https://circleci.com/gh/brentlintner/vile-phpmd.svg?style=svg&circle-token=8fc9fd7ba9275fa5f58b938c87c71bd0851c4476)](https://circleci.com/gh/brentlintner/vile-phpmd)
 
 A [vile](http://github.com/brentlintner/vile)
 plugin for [phpmd](http://phpmd.org).
+
+**NOTICE**
+
+This project is not actively maintained. If you want to
+help maintain the project, or if you have a better
+alternative to switch to, please open an issue and ask!
 
 ## Requirements
 
