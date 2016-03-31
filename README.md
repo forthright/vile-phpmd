@@ -1,5 +1,7 @@
 # vile-phpmd [![Circle CI](https://circleci.com/gh/brentlintner/vile-phpmd.svg?style=svg&circle-token=8fc9fd7ba9275fa5f58b938c87c71bd0851c4476)](https://circleci.com/gh/brentlintner/vile-phpmd)
 
+[![score-badge](https://vile.io/brentlintner/vile-phpmd/badges/score?token=2GNCK8NSzNVbHbFSa3ey)](https://vile.io/brentlintner/vile-phpmd) [![security-badge](https://vile.io/brentlintner/vile-phpmd/badges/security?token=2GNCK8NSzNVbHbFSa3ey)](https://vile.io/brentlintner/vile-phpmd) [![coverage-badge](https://vile.io/brentlintner/vile-phpmd/badges/coverage?token=2GNCK8NSzNVbHbFSa3ey)](https://vile.io/brentlintner/vile-phpmd) [![dependency-badge](https://vile.io/brentlintner/vile-phpmd/badges/dependency?token=2GNCK8NSzNVbHbFSa3ey)](https://vile.io/brentlintner/vile-phpmd)
+
 A [vile](https://vile.io) plugin for [phpmd](http://phpmd.org).
 
 **NOTICE**
