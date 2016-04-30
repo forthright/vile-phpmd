@@ -23,7 +23,9 @@ Currently, you need to have `phpmd` installed manually.
 
 For example, on [Arch](https://www.archlinux.org):
 
-    yaourt -Sa phpmd
+    yaourt -Sa phpmd --noconfirm
+    npm i @forthright/vile --save-dev
+    npm i @forthright/vile-phpmd --save-dev
 
 ## Config
 
