@@ -34,6 +34,8 @@ expect_to_set_args = (done, spawn_args, plugin_data) ->
         vile.spawn.should.have.been
           .calledWith "phpmd", spawn_args || { args: DEFAULT_ARGS }
           done()
+      , 10
+  return
 
 describe "phpmd", ->
   afterEach mimus.reset
@@ -77,6 +79,8 @@ describe "phpmd", ->
             setTimeout ->
               log.error.should.have.been.calledWith error
               done()
+            , 10
+        return
 
     describe "file paths", ->
       describe "when given a single path", ->
