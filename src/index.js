@@ -90,7 +90,10 @@ let phpmd_args = (data) => {
 let phpmd = (data) =>
   vile
     .spawn(PHPMD, { args: phpmd_args(data) })
-    .then(xml_to_json)
+    .then((spawn_data) => {
+      let stdout = _.get(spawn_data, "stdout", "")
+      return xml_to_json(stdout)
+    })
     .then((phpmd_result) => _.get(phpmd_result, "pmd.file", []))
 
 let issue_type = (violation) =>
