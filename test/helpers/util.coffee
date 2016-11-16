@@ -3,7 +3,7 @@ phpmd_xml = require "./../fixtures/phpmd-xml"
 
 setup = (vile) ->
   vile.spawn.returns new Promise (resolve) ->
-    resolve(phpmd_xml)
+    resolve({ code: 0, stdout: phpmd_xml, stderr: "" })
 
 issues = [
   {
