@@ -1,4 +1,4 @@
-# vile-phpmd [![Circle CI](https://circleci.com/gh/forthright/vile-phpmd.svg?style=svg&circle-token=8fc9fd7ba9275fa5f58b938c87c71bd0851c4476)](https://circleci.com/gh/forthright/vile-phpmd)
+# vile-phpmd [![Circle CI](https://circleci.com/gh/forthright/vile-phpmd.svg?style=shield&circle-token=8fc9fd7ba9275fa5f58b938c87c71bd0851c4476)](https://circleci.com/gh/forthright/vile-phpmd)
 
 [![score-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd) [![security-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd) [![coverage-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd) [![dependency-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd)
 
