@@ -1,7 +1,7 @@
 {
   "name": "vile-phpmd",
   "version": "0.3.2",
-  "description": "A vile plugin for phpmd",
+  "description": "Identify common style and maintainability issues in your PHP code.",
   "main": "lib/index.js",
   "files": [
     "lib",

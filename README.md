@@ -1,19 +1,12 @@
 # vile-phpmd [![Circle CI](https://circleci.com/gh/forthright/vile-phpmd.svg?style=shield&circle-token=8fc9fd7ba9275fa5f58b938c87c71bd0851c4476)](https://circleci.com/gh/forthright/vile-phpmd) [![score-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd) [![security-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd) [![coverage-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd) [![dependency-badge](https://vile.io/api/v0/projects/vile-phpmd/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-phpmd)
 
-A [vile](https://vile.io) plugin for [phpmd](http://phpmd.org).
-
-**NOTICE**
-
-This project is not actively maintained. If you want to
-help maintain the project, or if you have a better
-alternative to switch to, please open an issue and ask!
+A [Vile](https://vile.io) plugin for identifying common style and
+maintainability issues in your PHP code (via [PHPMD](http://phpmd.org)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
-- [php](http://php.net)
-- [phpmd](http://phpmd.org)
+- [Node.js](http://nodejs.org)
+- [PHP](http://php.net)
 
 ## Installation
 
@@ -87,7 +80,7 @@ phpmd:
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -114,13 +107,7 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
-
-### Maintainers
-
-- Nothing to see here...
 
 ## Architecture
 
@@ -129,10 +116,10 @@ an XML CLI output that is currently used until a more ideal
 option is implemented.
 
 - `bin` houses any shell based scripts
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
 - `lib` generated js library
 
-## Hacking
+## Developing
 
     cd vile-phpmd
     npm install
