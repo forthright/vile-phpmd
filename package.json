@@ -1,6 +1,6 @@
 {
   "name": "vile-phpmd",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Identify common style and maintainability issues in your PHP code.",
   "main": "lib/index.js",
   "files": [
